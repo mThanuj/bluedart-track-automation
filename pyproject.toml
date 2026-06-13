@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "bluedart-tracker"
+version = "1.0.0"
+description = "Automated BlueDart waybill tracking with OCR captcha solving and visualization"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "selenium>=4.15.0",
+    "webdriver-manager>=4.0.0",
+    "Pillow>=10.0.0",
+    "pytesseract>=0.3.10",
+    "matplotlib>=3.7.0",
+]
+
+[project.scripts]
+bluedart-tracker = "main:main"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+]
