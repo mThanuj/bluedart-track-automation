@@ -62,8 +62,6 @@ def solve_captcha(driver, captcha_img_id="user_regCaptchaImg"):
         return None
 
     try:
-        from PIL import ImageOps
-
         captcha_img = driver.find_element(By.ID, captcha_img_id)
         img_data = captcha_img.screenshot_as_png
         if not img_data:
